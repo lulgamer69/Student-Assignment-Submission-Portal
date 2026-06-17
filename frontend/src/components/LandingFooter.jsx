@@ -1,4 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 export default function LandingFooter() {
   const { isDark } = useTheme();
@@ -46,21 +47,21 @@ export default function LandingFooter() {
             }`}>
               For Users
             </h5>
-            <a href="/login" className={`block text-sm no-underline mb-3 transition-colors duration-300 hover:text-blue-600 ${
+            <Link to="/login" className={`block text-sm no-underline mb-3 transition-colors duration-300 hover:text-blue-600 ${
               isDark ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600'
             }`}>
               Student Login
-            </a>
-            <a href="/login" className={`block text-sm no-underline mb-3 transition-colors duration-300 hover:text-blue-600 ${
+            </Link>
+            <Link to="/login" className={`block text-sm no-underline mb-3 transition-colors duration-300 hover:text-blue-600 ${
               isDark ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600'
             }`}>
               Teacher Login
-            </a>
-            <a href="/register" className={`block text-sm no-underline mb-3 transition-colors duration-300 hover:text-blue-600 ${
+            </Link>
+            <Link to="/register" className={`block text-sm no-underline mb-3 transition-colors duration-300 hover:text-blue-600 ${
               isDark ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600'
             }`}>
               Register
-            </a>
+            </Link>
           </div>
 
           <div className="footer-col">

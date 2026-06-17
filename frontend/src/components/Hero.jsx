@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Bell } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useCounter } from '../hooks/useCounter';
@@ -90,15 +91,15 @@ export default function Hero({ loaded }) {
           <div className={`flex items-center gap-4 mb-12 transition-all duration-700 ${
             loaded ? 'opacity-100 translate-y-0 delay-500' : 'opacity-0 translate-y-5'
           }`}>
-            <a href="/register" className="px-7 py-3 bg-blue-600 text-white font-semibold rounded-lg no-underline transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 flex items-center gap-2 group">
+            <Link to="/register" className="px-7 py-3 bg-blue-600 text-white font-semibold rounded-lg no-underline transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 flex items-center gap-2 group">
               Get Started
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="/login" className={`px-7 py-3 border-2 font-semibold rounded-lg no-underline transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
+            </Link>
+            <Link to="/login" className={`px-7 py-3 border-2 font-semibold rounded-lg no-underline transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
               isDark ? 'border-blue-500 text-blue-400 hover:bg-blue-900/20' : 'border-blue-600 text-blue-600 hover:bg-blue-50'
             }`}>
               Login to Account
-            </a>
+            </Link>
           </div>
 
           <div className={`flex gap-12 transition-all duration-700 ${

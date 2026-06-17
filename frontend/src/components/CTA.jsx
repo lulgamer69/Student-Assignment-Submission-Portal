@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function CTA() {
   return (
     <section className="bg-black px-12 py-20 text-center">
@@ -28,18 +30,18 @@ export default function CTA() {
         </p>
 
         <div className="flex gap-3 justify-center">
-          <a
-            href="/register"
+          <Link
+            to="/register"
             className="px-6 py-2.5 bg-white rounded-lg text-black text-sm font-semibold no-underline transition-all hover:bg-gray-100 hover:translate-y-px"
           >
             Get Started Free
-          </a>
-          <a
-            href="/login"
+          </Link>
+          <Link
+            to="/login"
             className="px-6 py-2.5 rounded-lg border border-white/20 text-white/65 text-sm font-medium no-underline transition-all hover:border-white/50 hover:text-white"
           >
             Learn More
-          </a>
+          </Link>
         </div>
       </div>
     </section>

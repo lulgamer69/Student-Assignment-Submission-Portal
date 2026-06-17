@@ -1,6 +1,7 @@
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function LandingHeader({ loaded, onFeaturesClick, onContactClick }) {
   const { isDark, toggleTheme } = useTheme();
@@ -74,13 +75,13 @@ export default function LandingHeader({ loaded, onFeaturesClick, onContactClick 
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             
-            <a href="/login" className={`hidden sm:inline-block px-3 md:px-5 py-2 rounded-lg border-2 font-medium text-xs md:text-sm no-underline transition-all duration-300 hover-lift ${
+            <Link to="/login" className={`hidden sm:inline-block px-3 md:px-5 py-2 rounded-lg border-2 font-medium text-xs md:text-sm no-underline transition-all duration-300 hover-lift ${
               isDark
                 ? 'border-blue-500 text-blue-400 hover:bg-blue-500/10'
                 : 'border-blue-600 text-blue-600 hover:bg-blue-50'
             }`}>
               Login
-            </a>
+            </Link>
             
             <a href="/register" className={`hidden sm:inline-block px-3 md:px-5 py-2 rounded-lg font-medium text-xs md:text-sm no-underline transition-all duration-300 hover-lift ${
               isDark
