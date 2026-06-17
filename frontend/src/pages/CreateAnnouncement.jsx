@@ -26,7 +26,7 @@ export default function CreateAnnouncement(){
     
     setLoading(true);
     try {
-      const res=await fetch("http://localhost:5000/api/announcements",{
+      const res=await fetch("https://student-assignment-submission-portal.onrender.com/api/announcements",{
         method:"POST",
         headers:{
           "Content-Type":"application/json",

@@ -27,7 +27,7 @@ export default function EditAssignment() {
 
     const fetchAssignment = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/assignments/${id}`, {
+        const res = await fetch(`https://student-assignment-submission-portal.onrender.com/api/assignments/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -93,7 +93,7 @@ export default function EditAssignment() {
 
       if (id) {
         // Edit existing assignment
-        const res = await fetch(`http://localhost:5000/api/assignments/${id}`, {
+        const res = await fetch(`https://student-assignment-submission-portal.onrender.com/api/assignments/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

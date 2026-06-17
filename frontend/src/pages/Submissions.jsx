@@ -107,7 +107,7 @@ export default function Submissions() {
 
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.status === 401) {
@@ -136,7 +136,7 @@ export default function Submissions() {
       return;
     }
 
-    fetch("http://localhost:5000/api/submissions/my", {
+    fetch("https://student-assignment-submission-portal.onrender.com/api/submissions/my", {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(r => {
@@ -197,7 +197,7 @@ export default function Submissions() {
   const handleDownloadRubrics = (submission) => {
     const token = localStorage.getItem("token");
     const link = document.createElement('a');
-    link.href = `http://localhost:5000/api/submissions/${submission._id}/download`;
+    link.href = `https://student-assignment-submission-portal.onrender.com/api/submissions/${submission._id}/download`;
     link.setAttribute('Authorization', `Bearer ${token}`);
     link.download = `marked-rubrics-${submission._id}.pdf`;
     document.body.appendChild(link);
@@ -410,7 +410,7 @@ export default function Submissions() {
                             )}
                             {submission.file && (
                               <a
-                                href={`http://localhost:5000/${submission.file}`}
+                                href={`https://student-assignment-submission-portal.onrender.com/${submission.file}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all"
@@ -508,7 +508,7 @@ export default function Submissions() {
               <div className="mt-6">
                 <p className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'} mb-3`}>RUBRICS PDF</p>
                 <iframe
-                  src={`http://localhost:5000/${selectedSubmission.rubrics}`}
+                  src={`https://student-assignment-submission-portal.onrender.com/${selectedSubmission.rubrics}`}
                   title="Rubrics"
                   className={`w-full h-64 rounded-lg ${isDark ? 'bg-slate-700' : 'bg-gray-100'}`}
                 />

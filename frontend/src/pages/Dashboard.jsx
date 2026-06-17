@@ -8,7 +8,7 @@ export default function Dashboard() {
   useEffect(() => {
     const getMe = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         });
         const data = await res.json();

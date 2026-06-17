@@ -14,7 +14,7 @@ export default function StudentAnnouncements() {
   useEffect(() => {
     const fetchAnnouncements = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/announcements", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/announcements", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         });
         

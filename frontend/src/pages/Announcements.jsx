@@ -9,7 +9,7 @@ export default function Announcements(){
   const nav = useNavigate();
 
   useEffect(()=>{
-    fetch("http://localhost:5000/api/announcements",{
+    fetch("https://student-assignment-submission-portal.onrender.com/api/announcements",{
       headers:{Authorization:`Bearer ${localStorage.getItem("token")}`}
     })
     .then(r=>{
@@ -26,7 +26,7 @@ export default function Announcements(){
 
   const deleteAnnouncement = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/announcements/${id}`,{
+      const res = await fetch(`https://student-assignment-submission-portal.onrender.com/api/announcements/${id}`,{
         method:"DELETE",
         headers:{Authorization:`Bearer ${localStorage.getItem("token")}`}
       });

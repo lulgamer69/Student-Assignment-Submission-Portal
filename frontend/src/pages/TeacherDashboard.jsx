@@ -61,7 +61,7 @@ export default function TeacherDashboard() {
       try {
         const token = localStorage.getItem('token');
         
-        const userRes = await fetch('http://localhost:5000/api/auth/me', {
+        const userRes = await fetch('https://student-assignment-submission-portal.onrender.com/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (userRes.ok) {
@@ -69,7 +69,7 @@ export default function TeacherDashboard() {
           setUserData(userData.user);
         }
 
-        const assignmentRes = await fetch('http://localhost:5000/api/assignments', {
+        const assignmentRes = await fetch('https://student-assignment-submission-portal.onrender.com/api/assignments', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (assignmentRes.ok) {
@@ -94,7 +94,7 @@ export default function TeacherDashboard() {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/notifications", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/notifications", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         });
         if (res.ok) {

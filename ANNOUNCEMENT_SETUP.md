@@ -44,7 +44,7 @@ PORT=5000
 
 ### Teacher Creates Announcement
 ```bash
-curl -X POST http://localhost:5000/api/announcements \
+curl -X POST https://student-assignment-submission-portal.onrender.com/api/announcements \
   -H "Authorization: Bearer YOUR_TEACHER_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -68,7 +68,7 @@ Each student gets an email like this:
 
 ### Get All Announcements
 ```bash
-curl -X GET http://localhost:5000/api/announcements \
+curl -X GET https://student-assignment-submission-portal.onrender.com/api/announcements \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 

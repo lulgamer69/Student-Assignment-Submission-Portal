@@ -94,7 +94,7 @@ export default function TeacherSubmissions() {
 
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.status === 401) {
@@ -129,7 +129,7 @@ export default function TeacherSubmissions() {
         // Fetch total student count
         let totalStudents = 50; // fallback
         try {
-          const countRes = await fetch("http://localhost:5000/api/auth/students/count", {
+          const countRes = await fetch("https://student-assignment-submission-portal.onrender.com/api/auth/students/count", {
             headers: { Authorization: `Bearer ${token}` }
           });
           if (countRes.ok) {
@@ -145,7 +145,7 @@ export default function TeacherSubmissions() {
           console.log("Fetching submissions for assignment:", assignmentId);
           
           const submissionsRes = await fetch(
-            `http://localhost:5000/api/submissions/assignment/${assignmentId}`,
+            `https://student-assignment-submission-portal.onrender.com/api/submissions/assignment/${assignmentId}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           
@@ -178,7 +178,7 @@ export default function TeacherSubmissions() {
             // Fetch real non-submitted students
             try {
               const nonSubmittedRes = await fetch(
-                `http://localhost:5000/api/submissions/pending/${assignmentId}`,
+                `https://student-assignment-submission-portal.onrender.com/api/submissions/pending/${assignmentId}`,
                 { headers: { Authorization: `Bearer ${token}` } }
               );
               
@@ -211,7 +211,7 @@ export default function TeacherSubmissions() {
           console.log("Fetching all assignments for list view");
           
           const assignmentsRes = await fetch(
-            `http://localhost:5000/api/assignments`,
+            `https://student-assignment-submission-portal.onrender.com/api/assignments`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           
@@ -231,7 +231,7 @@ export default function TeacherSubmissions() {
               assignmentList.map(async (assignment) => {
                 try {
                   const submissionsRes = await fetch(
-                    `http://localhost:5000/api/submissions/assignment/${assignment._id}`,
+                    `https://student-assignment-submission-portal.onrender.com/api/submissions/assignment/${assignment._id}`,
                     { headers: { Authorization: `Bearer ${token}` } }
                   );
                   if (submissionsRes.ok) {
@@ -276,7 +276,7 @@ export default function TeacherSubmissions() {
     setSendingReminder(prev => ({ ...prev, [student._id]: true }));
     try {
       const assignmentTitle = submissions[0]?.assignment?.title || "Assignment";
-      const response = await fetch("http://localhost:5000/api/notifications/send", {
+      const response = await fetch("https://student-assignment-submission-portal.onrender.com/api/notifications/send", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -566,7 +566,7 @@ export default function TeacherSubmissions() {
                             <div className="flex items-center gap-2">
                               {sub.file && (
                                 <a
-                                  href={`http://localhost:5000/${sub.file}`}
+                                  href={`https://student-assignment-submission-portal.onrender.com/${sub.file}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all"

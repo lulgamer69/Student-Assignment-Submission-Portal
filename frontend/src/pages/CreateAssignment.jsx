@@ -51,7 +51,7 @@ export default function CreateAssignment() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:5000/api/assignments', {
+      const res = await fetch('https://student-assignment-submission-portal.onrender.com/api/assignments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

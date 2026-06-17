@@ -95,7 +95,7 @@ export default function Assignments() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         });
         const data = await res.json();
@@ -112,8 +112,8 @@ export default function Assignments() {
 
   useEffect(() => {
     const endpoint = userRole === "student" 
-      ? "http://localhost:5000/api/assignments/student"
-      : "http://localhost:5000/api/assignments";
+      ? "https://student-assignment-submission-portal.onrender.com/api/assignments/student"
+      : "https://student-assignment-submission-portal.onrender.com/api/assignments";
 
     if (!userRole) return;
 
@@ -220,7 +220,7 @@ export default function Assignments() {
     formData.append("file", fileInput.files[0]);
 
     try {
-      const res = await fetch("http://localhost:5000/api/submissions", {
+      const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/submissions", {
         method: "POST",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         body: formData

@@ -31,7 +31,7 @@ export default function StudentProfilePage() {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:5000/api/auth/me', {
+        const res = await fetch('https://student-assignment-submission-portal.onrender.com/api/auth/me', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {
@@ -62,7 +62,7 @@ export default function StudentProfilePage() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/auth/update-profile', {
+      const res = await fetch('https://student-assignment-submission-portal.onrender.com/api/auth/update-profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ export default function StudentProfilePage() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/auth/change-password', {
+      const res = await fetch('https://student-assignment-submission-portal.onrender.com/api/auth/change-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

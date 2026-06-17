@@ -61,7 +61,7 @@ export default function Grade(){
 
     const fetchSubmission = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/submissions/${id}`, {
+        const res = await fetch(`https://student-assignment-submission-portal.onrender.com/api/submissions/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -170,7 +170,7 @@ export default function Grade(){
     setLoading(true);
     setSuccess("");
     try {
-      const res = await fetch(`http://localhost:5000/api/submissions/${id}`, {
+      const res = await fetch(`https://student-assignment-submission-portal.onrender.com/api/submissions/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ export default function MySubmissions() {
   const nav = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/submissions/my", {
+    fetch("https://student-assignment-submission-portal.onrender.com/api/submissions/my", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     })
     .then(r => {
@@ -25,7 +25,7 @@ export default function MySubmissions() {
 
   const downloadReport = async (submissionId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/submissions/${submissionId}/download`, {
+      const res = await fetch(`https://student-assignment-submission-portal.onrender.com/api/submissions/${submissionId}/download`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
       

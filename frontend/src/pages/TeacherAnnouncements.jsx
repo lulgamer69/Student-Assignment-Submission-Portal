@@ -67,7 +67,7 @@ export default function TeacherAnnouncements() {
 
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.status === 401) {
@@ -95,7 +95,7 @@ export default function TeacherAnnouncements() {
 
     const fetchAnnouncements = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/announcements", {
+        const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/announcements", {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.status === 401) {
@@ -132,7 +132,7 @@ export default function TeacherAnnouncements() {
 
     setCreating(true);
     try {
-      const res = await fetch("http://localhost:5000/api/announcements", {
+      const res = await fetch("https://student-assignment-submission-portal.onrender.com/api/announcements", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -175,7 +175,7 @@ export default function TeacherAnnouncements() {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/announcements/${id}`, {
+      const res = await fetch(`https://student-assignment-submission-portal.onrender.com/api/announcements/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }
       });
