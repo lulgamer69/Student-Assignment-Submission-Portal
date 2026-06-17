@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acadly</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="Acadly logo.png" />
+    <span>Acadly</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">How It Works</a>
+    <a href="#">For Teachers</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="nav-actions">
+    <button class="icon">☀️</button>
+    <button class="btn-outline">Login</button>
+    <button class="btn-primary">Register</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="tag">🎓 Smart Assignment Portal</span>
+
+    <h1>
+      Manage Assignments.<br>
+      <span>Simplify Submissions.</span>
+    </h1>
+
+    <p>
+      Acadly helps students submit assignments and teachers manage,
+      review, and grade — all in one place.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn-primary">Get Started →</button>
+      <button class="btn-outline">Login to Account</button>
+    </div>
+
+    <div class="stats">
+      <div><strong>1,000+</strong><br>Active Users</div>
+      <div><strong>50+</strong><br>Courses Managed</div>
+      <div><strong>99%</strong><br>Submission Success</div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="dashboard-box"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <h2>Everything You Need in <span>One Platform</span></h2>
+  <p>Acadly makes assignment management simple, efficient, and hassle-free.</p>
+
+  <div class="feature-grid">
+    <div class="card">Upload Assignments</div>
+    <div class="card">Track Deadlines</div>
+    <div class="card">Grade & Feedback</div>
+    <div class="card">Announcements</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <div class="logo">
+        <img src="logo.png" />
+        <span>Acadly</span>
+      </div>
+      <p>A smart assignment submission portal built for students and teachers.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>Home</p>
+      <p>Features</p>
+      <p>Contact</p>
+    </div>
+
+    <div>
+      <h4>For Users</h4>
+      <p>Student Login</p>
+      <p>Teacher Login</p>
+      <p>Register</p>
+    </div>
+
+    <div>
+      <h4>Connect</h4>
+      <div class="icons">
+        <span>🐙</span>
+        <span>🔗</span>
+        <span>✉️</span>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="copyright">© 2024 Acadly. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  color: #1e293b;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.logo img {
+  width: 30px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid #cbd5e1;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  align-items: center;
+}
+
+.hero-left {
+  max-width: 500px;
+}
+
+.tag {
+  background: #e0f2fe;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  color: #64748b;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.hero-right .dashboard-box {
+  width: 450px;
+  height: 260px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* FEATURES */
+.features {
+  text-align: center;
+  padding: 60px;
+}
+
+.features h2 span {
+  color: #2563eb;
+}
+
+.feature-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+.footer {
+  padding: 60px;
+  background: #f1f5f9;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #64748b;
+}
+</style>

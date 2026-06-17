@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+
+# Dependencies
+node_modules
+**/node_modules
+
+# Build
+dist
+dist-ssr
+
+# Environment Variables
+.env
+**/.env
+
+# Uploads
+backend/uploads
+
+# Temporary Files
+trial
+temp_original.jsx
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
