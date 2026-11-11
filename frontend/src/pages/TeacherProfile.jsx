@@ -190,7 +190,7 @@ export default function TeacherProfile() {
   return (
     <>
       <style>{styles}</style>
-      <div className={`page-fade-in flex flex-row h-screen w-screen overflow-hidden ${isDark ? 'bg-slate-950' : 'bg-[#e8eeff]'}`}>
+      <div className={`page-fade-in responsive-app-shell flex flex-row h-screen w-screen overflow-hidden ${isDark ? 'bg-slate-950' : 'bg-[#e8eeff]'}`}>
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950' : 'bg-gradient-to-br from-[#e8eeff] via-[#f0f4ff] to-[#eef2ff]'}`}/>
           <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-blob"/>
@@ -201,7 +201,7 @@ export default function TeacherProfile() {
         </div>
 
         {/* Sidebar */}
-        <div className={`w-64 h-screen flex-shrink-0 ${isDark ? 'bg-slate-900/80 backdrop-blur-sm border-r border-slate-700/30' : 'bg-white/80 backdrop-blur-sm border-r border-gray-200/30'} flex flex-col overflow-y-auto relative z-10`}>
+        <div className={`w-64 h-screen flex-shrink-0 responsive-app-sidebar ${isDark ? 'bg-slate-900/80 backdrop-blur-sm border-r border-slate-700/30' : 'bg-white/80 backdrop-blur-sm border-r border-gray-200/30'} flex flex-col overflow-y-auto relative z-10`}>
           <div className={`p-6 border-b ${isDark ? 'border-slate-700' : 'border-gray-200'}`}>
             <div className="flex items-center gap-2">
               <img src={acadlyLogo} alt="Acadly" className="w-8 h-8 object-contain" />
@@ -240,9 +240,9 @@ export default function TeacherProfile() {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 min-w-0 h-screen flex flex-col overflow-hidden relative z-5">
+        <div className="flex-1 min-w-0 h-screen flex flex-col overflow-hidden relative z-5 responsive-app-main">
           {/* Top Bar */}
-          <div className={`flex-shrink-0 ${isDark ? 'bg-slate-900/70 backdrop-blur-sm border-b border-slate-700/50' : 'bg-white/70 backdrop-blur-sm border-b border-gray-200/50'} px-8 py-5 flex items-center justify-between`}>
+          <div className={`flex-shrink-0 responsive-app-topbar ${isDark ? 'bg-slate-900/70 backdrop-blur-sm border-b border-slate-700/50' : 'bg-white/70 backdrop-blur-sm border-b border-gray-200/50'} px-8 py-5 flex items-center justify-between`}>
             <h2 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>Profile</h2>
             <div className="flex items-center gap-4">
               <div className={`px-4 py-2 rounded-full text-sm font-semibold bg-purple-500/20 border border-purple-500/30 text-purple-600`}>
@@ -255,7 +255,7 @@ export default function TeacherProfile() {
           </div>
 
           {/* Content Area */}
-          <div className="flex-1 min-w-0 overflow-y-auto relative z-5 p-8">
+          <div className="flex-1 min-w-0 overflow-y-auto relative z-5 responsive-app-content p-8">
             {loading ? (
               <div className="flex items-center justify-center h-full">
                 <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>Loading profile...</p>

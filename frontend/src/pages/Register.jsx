@@ -304,7 +304,7 @@ export default function Register() {
 
   return (
     <div
-      className={`h-screen flex flex-col relative overflow-hidden ${
+      className={`responsive-auth-page h-screen flex flex-col relative overflow-hidden ${
         isDark
           ? "bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950"
           : "bg-gradient-to-br from-[#e8eeff] via-[#f0f4ff] to-[#eef2ff]"
@@ -361,12 +361,12 @@ export default function Register() {
       `}</style>
 
       {/* ── LOGO TOP RIGHT ── */}
-      <div className="absolute top-6 right-6 z-20">
+      <div className="responsive-auth-logo absolute top-6 right-6 z-20">
         <img src={acadlyLogo} alt="Acadly" className="h-24 w-auto opacity-90 hover:opacity-100 transition" />
       </div>
 
       {/* ── MAIN CONTENT ── */}
-      <div className="flex flex-1 items-center justify-center px-4 md:px-10 relative z-10">
+      <div className="responsive-auth-content flex flex-1 items-center justify-center px-4 md:px-10 relative z-10">
         <div className="max-w-6xl w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
 
           {/* LEFT — TABLET ILLUSTRATION */}

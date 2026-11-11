@@ -78,7 +78,7 @@ export default function CreateAssignment() {
   return (
     <>
       <style>{styles}</style>
-      <div className={`page-fade-in min-h-screen w-screen ${isDark ? 'bg-slate-950' : 'bg-[#e8eeff]'}`}>
+      <div className={`page-fade-in responsive-assignment-page min-h-screen w-screen ${isDark ? 'bg-slate-950' : 'bg-[#e8eeff]'}`}>
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950' : 'bg-gradient-to-br from-[#e8eeff] via-[#f0f4ff] to-[#eef2ff]'}`}/>
           <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-blob"/>
@@ -104,8 +104,8 @@ export default function CreateAssignment() {
             </button>
           </div>
 
-          <div className="flex-1 flex items-center justify-center px-8 py-12">
-            <div className={`w-full max-w-2xl rounded-lg p-8 shadow-2xl backdrop-blur-sm ${isDark ? 'bg-slate-800/50 border border-slate-700' : 'bg-white/50 border border-gray-200'}`}>
+          <div className="responsive-assignment-content flex-1 flex items-center justify-center px-8 py-12">
+            <div className={`responsive-assignment-card w-full max-w-2xl rounded-lg p-8 shadow-2xl backdrop-blur-sm ${isDark ? 'bg-slate-800/50 border border-slate-700' : 'bg-white/50 border border-gray-200'}`}>
               <h1 className={`text-4xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 Create Assignment
               </h1>

@@ -36,7 +36,7 @@ export default function Hero({ loaded }) {
   }, [loaded]);
 
   return (
-    <section className={`relative px-8 py-24 transition-all duration-1000 ${
+    <section className={`relative responsive-hero px-8 py-24 transition-all duration-1000 ${
       loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
     } ${
       isDark ? 'bg-gray-950' : 'bg-gradient-to-br from-white via-blue-50 to-blue-100'
@@ -70,7 +70,7 @@ export default function Hero({ loaded }) {
             <span>Smart Assignment Portal</span>
           </div>
 
-          <h1 className={`text-5xl font-bold leading-tight mb-6 transition-all duration-700 ${
+          <h1 className={`responsive-hero-title text-5xl font-bold leading-tight mb-6 transition-all duration-700 ${
             loaded ? 'opacity-100 translate-y-0 delay-300' : 'opacity-0 translate-y-5'
           } ${
             isDark ? 'text-white' : 'text-gray-900'
@@ -88,7 +88,7 @@ export default function Hero({ loaded }) {
             Acadly helps students submit assignments and teachers manage, review, and grade — all in one place.
           </p>
 
-          <div className={`flex items-center gap-4 mb-12 transition-all duration-700 ${
+          <div className={`responsive-hero-actions flex items-center gap-4 mb-12 transition-all duration-700 ${
             loaded ? 'opacity-100 translate-y-0 delay-500' : 'opacity-0 translate-y-5'
           }`}>
             <Link to="/register" className="px-7 py-3 bg-blue-600 text-white font-semibold rounded-lg no-underline transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 flex items-center gap-2 group">
@@ -102,7 +102,7 @@ export default function Hero({ loaded }) {
             </Link>
           </div>
 
-          <div className={`flex gap-12 transition-all duration-700 ${
+          <div className={`responsive-hero-stats flex gap-12 transition-all duration-700 ${
             loaded ? 'opacity-100 translate-y-0 delay-600' : 'opacity-0 translate-y-5'
           }`}>
             <div>

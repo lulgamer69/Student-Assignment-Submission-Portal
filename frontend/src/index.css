@@ -168,3 +168,77 @@
     @apply bg-gray-800;
   }
 }
+
+/* Responsive layout support for the existing student and teacher shells. */
+@media (max-width: 1024px) {
+  .responsive-app-shell { width: 100% !important; min-height: 100vh; min-height: 100dvh; height: auto !important; overflow: visible !important; flex-direction: column !important; }
+  .responsive-app-sidebar { width: 100% !important; height: auto !important; max-height: none; flex: 0 0 auto !important; overflow: visible !important; flex-direction: row !important; align-items: center; border-right: 0 !important; border-bottom: 1px solid rgba(148, 163, 184, 0.25); }
+  .responsive-app-sidebar > div:first-child { display: none; }
+  .responsive-app-sidebar > div:nth-child(2) { min-width: 0; padding: 0.5rem !important; flex: 1 1 auto !important; flex-direction: row !important; gap: 0.25rem !important; overflow-x: auto; overscroll-behavior-x: contain; }
+  .responsive-app-sidebar > div:nth-child(2) button { width: auto !important; flex: 0 0 auto; white-space: nowrap; padding: 0.625rem 0.75rem !important; }
+  .responsive-app-sidebar > div:last-child { flex: 0 0 auto; padding: 0.5rem !important; border-top: 0 !important; }
+  .responsive-app-sidebar > div:last-child button { width: auto !important; padding: 0.625rem 0.75rem !important; }
+  .responsive-app-main { width: 100%; height: auto !important; min-height: 0; overflow: visible !important; }
+  .responsive-app-topbar { min-height: 3.75rem; padding: 0.75rem 1rem !important; gap: 0.75rem; flex-wrap: wrap; }
+  .responsive-app-content { min-width: 0; overflow: visible !important; padding: 1.25rem !important; }
+  .responsive-app-topbar > div, .responsive-app-content > div { min-width: 0; }
+  .grid-cols-4, .grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 640px) {
+  html, body, #root { width: 100%; min-width: 0; overflow-x: hidden; }
+  .responsive-app-sidebar > div:nth-child(2) button { gap: 0.45rem !important; padding: 0.625rem 0.65rem !important; font-size: 0.8rem; }
+  .responsive-app-sidebar > div:nth-child(2) button svg { width: 1rem; height: 1rem; flex: 0 0 auto; }
+  .responsive-app-sidebar > div:last-child button span { display: none; }
+  .responsive-app-topbar { align-items: center; justify-content: space-between; padding: 0.65rem 0.75rem !important; }
+  .responsive-app-topbar > div { max-width: 100%; }
+  .responsive-app-content { padding: 1rem 0.75rem !important; }
+  .responsive-app-content h1 { font-size: clamp(1.5rem, 7vw, 2rem) !important; line-height: 1.2; overflow-wrap: anywhere; }
+  .responsive-app-content h2 { overflow-wrap: anywhere; }
+  .grid-cols-4, .grid-cols-3, .grid-cols-2 { grid-template-columns: minmax(0, 1fr) !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  input, textarea, select, button { max-width: 100%; }
+  img, video, canvas, svg { max-width: 100%; }
+  .fixed.inset-0 { padding: 0.75rem !important; }
+  .fixed.inset-0 > div { max-height: calc(100dvh - 1.5rem); overflow-y: auto; }
+}
+
+@media (max-width: 640px) {
+  .responsive-hero { padding: 3rem 1rem !important; }
+  .responsive-hero-title { font-size: clamp(2rem, 9vw, 2.65rem) !important; line-height: 1.12 !important; overflow-wrap: anywhere; }
+  .responsive-hero-actions { align-items: stretch !important; flex-direction: column !important; max-width: 22rem; margin-bottom: 2rem !important; }
+  .responsive-hero-actions a { justify-content: center; text-align: center; }
+  .responsive-hero-stats { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem !important; }
+  .responsive-features { padding: 3rem 1rem !important; }
+  .responsive-features h2 { font-size: clamp(1.75rem, 8vw, 2.25rem) !important; line-height: 1.2; }
+  .responsive-features > div > div:first-child { margin-bottom: 2rem !important; }
+}
+
+@media (max-width: 640px) {
+  .responsive-auth-page { height: auto !important; min-height: 100vh; min-height: 100dvh; overflow-y: auto !important; overflow-x: hidden; }
+  .responsive-auth-page > div { flex-shrink: 0; }
+  .responsive-assignment-page { width: 100% !important; overflow-x: hidden; }
+  .responsive-assignment-content { align-items: flex-start !important; padding: 1rem 0.75rem !important; }
+  .responsive-assignment-card { padding: 1rem !important; }
+  .responsive-assignment-card h1 { font-size: 1.75rem !important; margin-bottom: 1.25rem !important; }
+}
+
+@media (max-width: 1024px) {
+  .responsive-auth-page { height: auto !important; min-height: 100vh; min-height: 100dvh; overflow-y: auto !important; overflow-x: hidden; }
+}
+
+@media (max-width: 640px) {
+  .responsive-auth-content { flex: 0 0 auto !important; align-items: flex-start !important; padding: 7rem 1rem 1.5rem !important; }
+}
+
+@media (max-width: 1024px) {
+  table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+@media (max-width: 1024px) {
+  .responsive-auth-logo { position: relative !important; top: auto !important; right: auto !important; align-self: flex-end; margin: 0.75rem 1rem 0; }
+}
+
+@media (max-width: 640px) {
+  .responsive-auth-content { flex: 0 0 auto !important; align-items: flex-start !important; padding: 0.75rem 1rem 1.5rem !important; }
+}

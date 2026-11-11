@@ -28,7 +28,7 @@ export default function Features() {
   ];
 
   return (
-    <section className={`px-8 py-20 transition-colors duration-300 ${
+    <section className={`responsive-features px-8 py-20 transition-colors duration-300 ${
       isDark ? 'bg-gray-900' : 'bg-white'
     } relative overflow-hidden`}>
       {/* Optional: Decorative elements */}
